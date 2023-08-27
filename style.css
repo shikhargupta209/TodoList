@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+body {
+  background-color: rgb(73, 73, 73);
+}
+hr {
+  margin: 10px;
+}
+button {
+  border: none;
+  background-color: transparent;
+}
+.container {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 100px auto auto auto;
+  max-width: 500px;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(66, 66, 66, 1);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(66, 66, 66, 1);
+  box-shadow: 0px 0px 10px 3px rgba(66, 66, 66, 1);
+  padding-bottom: 10px;
+}
+.container h1 {
+  text-align: center;
+  margin: 10px 0px;
+  color: rgb(0, 134, 168);
+}
+/* input box  */
+.inputBox {
+  background-color: rgb(111, 226, 255);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  transition: 0.2s ease-in-out;
+}
+.inputBoActiveBg {
+  background-color: rgb(72, 218, 255);
+}
+.inputBox i {
+  font-size: 25px;
+}
+.inputBox input {
+  background-color: transparent;
+  font-size: 20px;
+  width: 100%;
+  margin: auto 5px auto 15px;
+  border: none;
+  outline: none;
+}
+.inputBox input::placeholder {
+  color: rgb(0, 122, 156);
+}
+
+#addTask {
+  cursor: pointer;
+}
+.addTask {
+  visibility: hidden;
+}
+
+/* top navigation */
+.navigations {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 0px 10px;
+  color: rgb(0, 156, 187);
+}
+#checkAllTasks,
+#clearCheckedTasks {
+  cursor: pointer;
+}
+
+/* tasks list */
+.taskList {
+  display: flex;
+  flex-direction: column;
+}
+.task {
+  margin: 20px 10px;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+}
+.taskHide {
+  display: none;
+}
+.task i {
+  font-size: 25px;
+  font-weight: 500;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.task:hover i {
+  opacity: 1;
+}
+/* Checkbox */
+.taskCheckBox[type="checkbox"] {
+  position: absolute;
+  margin-top: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #828282;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.taskCheckBox[type="checkbox"]:checked {
+  text-decoration: line-through;
+  background-color: rgb(72, 218, 255);
+  border: 2px solid #ffffff;
+}
+.task span {
+  margin-left: 35px;
+}
+/* footer navigations */
+.showCompletedButtons span {
+  cursor: pointer;
+}
+.highlight {
+  color: black;
+  font-weight: 600;
+}

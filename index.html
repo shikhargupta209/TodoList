@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My TodoList</h1>
+        <!-- top input box -->
+        <div id="inputBox" class="inputBox">
+            <span>
+                <i class="fa-regular fa-note-sticky"></i>
+            </span>
+            <input id="takeInput" type="text" placeholder="Type Your Todo list">
+            <span id="addTask" class="addTask">
+                <i class="fa-regular fa-square-plus"></i>
+            </span>
+        </div>
+
+        <!-- top second navigations -->
+        <div class="navigations">
+            <span id="checkAllTasks">
+                <i id="checkAllTasksTick" class="fa-solid fa-check"></i>
+                Complete All tasks
+            </span>
+            <span id="clearCheckedTasks">Clear completed</span>
+        </div>
+
+        <hr>
+        <!-- task lists -->
+        <div id="taskList" class="taskList">
+            <div class="task">
+                <input id="temp" class="taskCheckBox" type="checkbox">
+                <span>Sample Task 1</span>
+                <i class="fa-regular fa-circle-xmark deleteButton"></i>
+            </div>
+            <div class="task">
+                <input class="taskCheckBox" type="checkbox">
+                <span>Sample Task 2</span>
+                <i class="fa-regular fa-circle-xmark deleteButton"></i>
+            </div>
+            <div class="task">
+                <input class="taskCheckBox" type="checkbox">
+                <span>Sample Task 3</span>
+                <i class="fa-regular fa-circle-xmark deleteButton"></i>
+            </div>
+        </div>
+        <hr>
+
+        <!-- bottom navigation bar  -->
+        <div class="navigations">
+            <span>
+                <span id="taskCount">0</span><span> Tasks left</span>
+            </span>
+            <span id="showCompletedButtons" class="showCompletedButtons">
+                <span class="highlight" id="allTaskButton">All&nbsp;&nbsp;</span>
+                <span id="uncompleteTaskButton">Uncomplete&nbsp;&nbsp;</span>
+                <span id="completedTaskButton">Completed</span>
+            </span>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
